@@ -1,11 +1,11 @@
-module vgacontroller(rst, clk,btnR,btnL,fire,startbtn,speaker, VGA_R, VGA_G, VGA_B,VGA_hSync, VGA_vSync);
+module vgacontroller(rst, clk,btnR,btnL,fire,startbtn, VGA_R, VGA_G, VGA_B,VGA_hSync, VGA_vSync);
 input rst, clk;
 input btnL,btnR,fire,startbtn;
 wire cleanL,cleanR,cleanfire;
 wire pulseL,pulseR,pulsefire,truepulseL,truepulseR;
 output reg [3:0] VGA_R,VGA_G,VGA_B;
 output VGA_hSync,VGA_vSync;
-output speaker;
+wire speaker;
 wire [9:0]haddr;
 wire [8:0]vaddr;
 wire [9:0]spaceshipX;
